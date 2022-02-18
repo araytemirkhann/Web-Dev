@@ -1,0 +1,34 @@
+if (year == 2015) {
+    alert( "That's correct!" );
+    alert( "You're so smart!" );
+}
+
+let year = prompt('In which year was the ECMAScript-2015 specification published?', '');
+if (year < 2015) {
+  alert( 'Too early...' );
+} else if (year > 2015) {
+  alert( 'Too late' );
+} else {
+  alert( 'Exactly!' );
+}
+
+let accessAllowed;
+let age = prompt('How old are you?', '');
+if (age > 18) {
+  accessAllowed = true;
+} else {
+  accessAllowed = false;
+}
+alert(accessAllowed);
+
+задача
+Будет alert показано?
+if ("0") {
+  alert( 'Hello' );
+}
+решение
+Да, это будет.
+Любая строка, кроме пустой (и "0"не пустой), становится trueв логическом контексте.
+if ("0") {
+  alert( 'Hello' );
+}

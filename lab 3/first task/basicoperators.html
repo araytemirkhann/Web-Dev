@@ -1,0 +1,159 @@
+Операнд – это то, к чему применяются операторы. Например, 
+при умножении 5 * 2есть два операнда: левый операнд 5и правый операнд 2. 
+Иногда люди называют эти «аргументы» вместо «операнды».
+Оператор является унарным , если он имеет один операнд. 
+Например, унарное отрицание -меняет знак числа:
+
+let x = 1;
+x = -x;
+alert( x ); // -1, unary negation was applied
+Оператор является бинарным , если он имеет два операнда. 
+Тот же минус существует и в бинарной форме:
+let x = 1, y = 3;
+alert( y - x ); // 2, binary minus subtracts values
+
+Дополнение +,
+вычитание -,
+Умножение *,
+дивизия /,
+Остаток %,
+Возведение в степень **.
+alert( 5 % 2 ); // 1, a remainder of 5 divided by 2
+alert( 8 % 3 );
+
+alert( 2 ** 2 ); // 2² = 4
+alert( 2 ** 3 ); // 2³ = 8
+
+alert( 4 ** (1/2) ); // 2 (power of 1/2 is the same as a square root)
+alert( 8 ** (1/3) ); // 2 (power of 1/3 is the same as a cubic root)
+
+let s = "my" + "string";
+alert(s); // mystring
+
+alert( '1' + 2 ); // "12"
+alert( 2 + '1' ); // "21"
+alert(2 + 2 + '1' ); // "41" and not "221"
+
+// No effect on numbers
+let x = 1;
+alert( +x ); // 1
+let y = -2;
+alert( +y ); // -2
+// Converts non-numbers
+alert( +true ); // 1
+alert( +"" );   // 0
+
+let n = 2;
+n = n + 5;
+n = n * 2;
+//Это обозначение можно сократить, используя операторы +=и *=:
+let n = 2;
+n += 5; // now n = 7 (same as n = n + 5)
+n *= 2; // now n = 14 (same as n = n * 2)
+alert( n ); // 14
+
+let counter = 2;
+counter++;        // works the same as counter = counter + 1, but is shorter
+alert( counter ); // 3
+Декремент -- уменьшает переменную на 1:
+let counter = 2;
+counter--;        // works the same as counter = counter - 1, but is shorter
+alert( counter ); // 1
+
+let counter = 1;
+let a = ++counter; // (*)
+alert(a); // 2
+В строке (*)форма префикса увеличивается и ++counterвозвращает 
+counterновое значение 2. Итак, alertшоу 2.
+Теперь воспользуемся постфиксной формой:
+let counter = 1;
+let a = counter++; // (*) changed ++counter to counter++
+alert(a); // 1
+
+let counter = 0;
+counter++;
+++counter;
+alert( counter ); // 2, the lines above did the same
+
+/* 
+И ( &)
+ИЛИ ( |)
+Исключающее ИЛИ ( ^)
+НЕ ( ~)
+СДВИГ ВЛЕВО ( <<)
+СДВИГ ВПРАВО ( >>)
+ЗАПОЛНЕНИЕ НУЛЯ ВПРАВО ( >>>) 
+*/
+let a = (1 + 2, 3 + 4);
+alert( a ); // 7 (the result of 3 + 4)
+
+// solutions
+//1
+a = 2
+b = 2
+c = 2
+d = 1
+let a = 1, b = 1;
+alert( ++a ); // 2, prefix form returns the new value
+alert( b++ ); // 1, postfix form returns the old value
+alert( a ); // 2, incremented once
+alert( b ); // 2, incremented once
+
+//2
+let a = 2;
+let x = 1 + (a *= 2);
+Ответ:
+a = 4(умножить на 2)
+x = 5(рассчитывается как 1 + 4)
+
+//3
+"" + 1 + 0 = "10" // (1)
+"" - 1 + 0 = -1 // (2)
+true + false = 1
+6 / "3" = 2
+"2" * "3" = 6
+4 + 5 + "px" = "9px"
+"$" + 4 + 5 = "$45"
+"4" - 2 = 2
+"4px" - 2 = NaN
+"  -9  " + 5 = "  -9  5" // (3)
+"  -9  " - 5 = -14 // (4)
+null + 1 = 1 // (5)
+undefined + 1 = NaN // (6)
+" \t \n" - 2 = -2 // (7)
+Дополнение со строкой "" + 1преобразуется 1в строку: "" + 1 = "1", 
+а затем имеем "1" + 0, применяется то же правило.
+Вычитание -(как и большинство математических операций) работает только с числами, 
+оно преобразует пустую строку ""в 0.
+Добавление со строкой добавляет число 5к строке.
+Вычитание всегда преобразуется в числа, поэтому получается " -9 "число -9
+(игнорируя пробелы вокруг него).
+nullстановится 0после числового преобразования.
+undefinedстановится NaNпосле числового преобразования.
+Символы пробела обрезаются в начале и в конце строки, 
+когда строка преобразуется в число. Здесь вся строка состоит из пробелов, 
+таких как \t, \nи «обычного» пробела между ними. 
+Таким образом, аналогично пустой строке, она становится 0.
+
+//4
+let a = prompt("First number?", 1);
+let b = prompt("Second number?", 2);
+
+alert(a + b); // 12
+решение
+Так переменные имеют значения "1"и "2"соответственно.
+let a = "1"; // prompt("First number?", 1);
+let b = "2"; // prompt("Second number?", 2);
+alert(a + b); // 12
+Что мы должны сделать, так это преобразовать строки в числа перед +. 
+Например, используя Number()или добавляя к ним +.
+
+Например, прямо перед prompt:
+let a = +prompt("First number?", 1);
+let b = +prompt("Second number?", 2);
+alert(a + b); // 3
+
+Или в alert:
+let a = prompt("First number?", 1);
+let b = prompt("Second number?", 2);
+alert(+a + +b); // 3

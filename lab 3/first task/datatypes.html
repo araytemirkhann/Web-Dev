@@ -1,0 +1,78 @@
+// no error
+let message = "hello";
+message = 123456;
+
+Infinity представляет математическую Бесконечность ∞. 
+Это специальное значение, которое больше любого числа.
+Мы можем получить его в результате деления на ноль:
+alert( 1 / 0 ); // Infinity
+alert( Infinity ); // Infinity
+
+NaN представляет собой вычислительную ошибку. 
+Это результат неправильной или неопределенной математической операции, например:
+alert( "not a number" / 2 ); // NaN, such division is erroneous
+NaNлипкий. Любая дальнейшая математическая операция над NaNвозвратом NaN:
+alert( NaN + 1 ); // NaN
+alert( 3 * NaN ); // NaN
+alert( "not a number" / 2 - 1 ); // NaN
+
+Значение BigIntсоздается путем добавления nв конец целого числа:
+// the "n" at the end means it's a BigInt
+const bigInt = 1234567890123456789012345678901234567890n
+
+let str = "Hello";
+let str2 = 'Single quotes are ok too';
+let phrase = `can embed another ${str}`;
+В JavaScript есть 3 типа кавычек.
+Двойные кавычки: "Hello".
+Одинарные кавычки: 'Hello'.
+Обратные кавычки: `Hello`.
+
+Обратные кавычки — это кавычки «расширенной функциональности». 
+Они позволяют нам встраивать переменные и выражения в строку, заключая их в ${…}, 
+let name = "John";
+// embed a variable
+alert( `Hello, ${name}!` ); // Hello, John!
+// embed an expression
+alert( `the result is ${1 + 2}` ); // the result is 3
+
+let nameFieldChecked = true; // yes, name field is checked
+let ageFieldChecked = false; // no, age field is not checked
+//Логические значения также получаются в результате сравнений:
+let isGreater = 4 > 1;
+alert( isGreater ); // true (the comparison result is "yes")
+
+let age = null;
+Особая ценность undefinedтакже стоит особняком. 
+Он создает свой собственный тип, как и null.
+let age;
+alert(age); // shows "undefined"
+
+//typeof xвозвращает строку с именем типа:
+typeof undefined // "undefined"
+typeof 0 // "number"
+typeof 10n // "bigint"
+typeof true // "boolean"
+typeof "foo" // "string"
+typeof Symbol("id") // "symbol"
+typeof Math // "object"  (1)
+typeof null // "object"  (2)
+typeof alert // "function"  (3)
+
+В JavaScript существует 8 основных типов данных.
+number для чисел любого типа: целых или с плавающей запятой, целые числа ограничены .±(253-1)
+bigint для целых чисел произвольной длины.
+string для струн. Строка может содержать ноль или более символов, отдельного односимвольного типа не существует.
+boolean для true/ false.
+nullдля неизвестных значений — самостоятельный тип, имеющий единственное значение null.
+undefined для неприсвоенных значений — самостоятельный тип, имеющий единственное значение undefined.
+object для более сложных структур данных.
+symbol для уникальных идентификаторов.
+
+let name = "Ilya";
+// the expression is a number 1
+alert( `hello ${1}` ); // hello 1
+// the expression is a string "name"
+alert( `hello ${"name"}` ); // hello name
+// the expression is a variable, embed it
+alert( `hello ${name}` ); // hello Ilya
