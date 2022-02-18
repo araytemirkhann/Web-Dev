@@ -1,0 +1,115 @@
+.all{
+    margin-left: 5%;
+    margin-left: 5%;
+    margin-top: 5px;
+}
+a{
+    text-decoration: none;
+}
+.logo{
+    margin-right: 10px;
+}
+
+.textmain{
+    position: relative;
+    margin-left: 13px;
+    bottom: 10px;
+    font-size: 13px;
+    color:black;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: lighter;
+}
+
+
+.newacc{
+    margin-left: 10px;
+    
+}
+.main{
+    width: 95%;
+    height: 500px;
+    background-color: aqua;
+    
+    
+    background:url(https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RWLAmj?ver=35aa&q=0&m=8&h=472&w=1259&b=%23FFFFFFFF&l=f&x=0&y=0&s=1898&d=712&aim=true);
+    background-repeat: no-repeat;
+    
+}
+.info{
+    width: 442px;
+    height: 50px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    position: relative;
+    top:22%;
+    left:6%;
+
+}
+h2{
+    font-weight: 700;
+}
+.check-button{
+    margin-top: 8px;
+    background-color: #ffff;
+    color: black;
+    text-align: center;
+    border: none;
+    width: 258px;
+    height: 40px;
+    font-weight: 700;
+}
+a.textmain:hover{
+    border-bottom: 2px solid black;
+}
+a:active{
+    padding: 10px;
+    border: 1px dashed black;
+}
+.logo:active{
+    padding-top: 15px;
+}
+.check-button:hover{
+    text-decoration: underline;
+    padding-right: 25px;
+}
+.photoslinks{
+    position: absolute;
+    left:89%;
+    bottom: 93%;
+}
+select{
+    position: relative;
+    left: 40%;
+    border: none;
+}
+select:hover{
+    border-bottom: 2px solid black;
+}
+select:active{
+    padding: 10px;
+    border: 1px dashed black;
+    text-decoration: none;
+}
+.extrainfo{
+    width: 95%;
+    display: inline-flex;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    
+}
+.extra1,.extra2,.extra3,.extra4{
+    width: 22%;
+
+
+}
+.extra2,.extra3,.extra4{
+    width: 22%;
+    margin-left: 43px;
+
+
+}
+.moreinfo{
+    font-weight: 600;
+    color: #3897f0;
+}
