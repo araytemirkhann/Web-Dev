@@ -1,0 +1,9 @@
+img{
+    display: inline-block;
+    width: 300px;
+    margin-right: 20px;
+    float: left;
+  }
+  div{
+    float: right;
+  }

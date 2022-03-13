@@ -1,0 +1,10 @@
+<h2>Product Details</h2>
+<img src={{product.img}}>
+<div *ngIf="product">
+  <h3>{{ product.name }}</h3>
+  <h4>Price: {{ product.price | currency }}</h4>
+  <p>Description: {{ product.description }}</p>
+  <p>Rating: {{product.rating}}</p>
+  <button (click)="amazonLink(product)">See On Amazon</button><br><br>
+  <button (click)="addToCart(product)">Buy</button>
+</div>
